@@ -1,13 +1,32 @@
-import os
+import xlrd
+
+import pandas as pd 
+
+
+
 nom_fichier= input('entrez le nom du fichier: ')
-if nom_fichier.endswith(".xlsx") !=True :
-    manip=open(nom_fichier,'r')
-    ext = '.'+ os.path.realpath(manip).split('.')[-1:][0]
-    filefinal = manip.replace(ext,'.pdf')
-    os.rename(manip ,filefinal)
-    sheet = manip.sheet_by_index(0)
-    n_column= input('entrez le numero de colonne' )
+liste=nom_fichier.split('.')
+print('chaine',liste)
+format_fichier=liste[-1]
+
+if (format_fichier) =='xlsx' :
     
+    data = pd.read_excel(nom_fichier, sheet_name='Feuil1')
+    print(data)
+    
+    
+    # wb = xlrd.open_workbook(nom_fichier)
+    # sheet = wb.sheet_by_index(0)
+    
+    # print(sheet.cell_value(0, 0))
+    
+    
+    #afficher le nombre de ligne dans le fichier 
+    # n_ligne=sheet.nrows
+    # for i in range(sheet.nrows):
+    #     somme= (sheet.cell_value(i, 3))
+    #     print("la moyenne d'age est: ",somme)
     
 else:
-    print("format eronnee")
+    print ("le format du ficheir est erronne ou le fichier n'existe pas")
+   
