@@ -1,0 +1,6 @@
+hours = input('plz writ how meany hours u worked ')
+hours = float(hours)
+price = input('how much for the hour ')
+price = float(hours)
+pay = (price)*(hours)
+print('your pay is ',pay,'$')
