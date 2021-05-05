@@ -21,12 +21,17 @@ if format_fichier =='xlsx' :
     numero= input ('choisir le numero de laction que vous voulez faire ' )
     if numero =='1':
         print('les colonnes du fichier', data.columns)
-    elif numero==2:
-        print('le nombre de lignes de fichier')
-    elif numero==3:
+    elif numero=='2':
+        num_rows=data.shape[0]
+        print('le nombre de lignes de fichier',num_rows)
+    elif numero=='3':
         print('lexportation des 10 premeires lignes' )
-    elif numero==4:
-        print('la moyenne de chaque colonne')
+        resultat=data.head(10)
+        resultat.to_excel(excel_writer = "array.xlsx")
+    elif numero=='4':
+        
+        print('la moyenne de lage', data["age"].mean())
+        
     else:
         print('resaissez le bon numero')
 
