@@ -1,0 +1,32 @@
+Saisir un fichier excel de test de vente de médicaments d’une pharmacie qui 
+va contenir les colonne suivantes:
+
+Numéro médicament
+Nom médicament
+identifiant client
+quantité
+prix unitaire
+
+
+écrire un programme qui permet le chargement du fichier
+ au démarrage du produit puis offrir 
+à l’utilisateur la possibilité d’avoir 
+les informations suivantes (selon son choix via un menu )
+
+médicament le plus vendu
+médicament le moins vendu
+le nombre total des produits vendus
+le nombre total des références produit vendus
+le nombre de clients
+le chiffre d’affaire 
+le médicament ayant généré le plus de chiffre d’affaires
+le médicament ayant généré le moins de chiffre d’affaires
+le client ayant généré le plus chiffre d’affairs
+le client ayant acheté le plus de produits
+
+Attention: le menu doit etre interactif, il doit s’afficher de façon continue, 
+on affiche un message au client qu’il peut arreter le menu en appuyant sur 0,
+ s’il appuye sur autre chose on lui affiche un message indiquant qu’il faut 
+saisir un numéro valide entre 0 et 10.
+
+
