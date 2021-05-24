@@ -1,0 +1,5 @@
+pour le fichier . csv
+il faut le charger avec python en df
+puis vérifier les cases vides et remplir ou gérer avec l'algorithme de ton choix avec explication de ton choix
+pour les cases non numérique sproposer une transformation numérique
+il faut qu'à la fain de otn algorithme qu'on puisse exécuter un algorithme de machine learning
