@@ -1,7 +1,7 @@
 import pandas as pd
 data_frame_melb=pd.read_csv("melb_data.csv")
 #print(data_frame_melb)
-#data_frame_melb.info()
+data_frame_melb.info()
 
 data_frame_sans_case_vide=data_frame_melb.dropna() 
 # j'ai opté pour la suppression des lignes des données manquantes, 
