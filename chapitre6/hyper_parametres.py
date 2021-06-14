@@ -1,9 +1,7 @@
 import pandas as pd
-from sklearn.metrics import confusion_matrix
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import Ridge
-from sklearn.neighbors import KNeighborsClassifier
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 
@@ -22,24 +20,15 @@ y=donnes_sans_vide["Price"]
 # on sépare les échantillons d'apprentissage 
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2)
 
-# on utilise un modele de regression de ridge 
-modele_ridge= Ridge()
-modele_ridge.fit(x_train,y_train)
-#afficher les coefficients du modele 
-modele_ridge.coef_
-y_predict=modele_ridge.predict(x_test)
+
 # on utilise l'algorithme de k plus proche voisin
 
 modele_rf=RandomForestClassifier()
-modele_knn= KNeighborsClassifier()
+
 
 modele_rf.fit(x_train,y_train)
-modele_knn.fit(x_train,y_train)
-
 y_predict_rf=modele_rf.predict(x_test)
-y_predict_knn= modele_knn.predict(x_test)
 
-confusion_matrix_rf= confusion_matrix(y_test, y_predict_rf)
-#print(confusion_matrix_rf)
-
-   # (y_predict,y_predict_rf, y_predict_knn)
+print(y_predict_rf)
+#dic_param={"n_estimator":[10,100,1000], "max":[5,7,9]}
+#modele_grid_rf= GridSearchCV(modele_rf,dic_param,scoring="roc_auc", cv=5)
