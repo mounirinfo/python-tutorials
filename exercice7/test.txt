@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS public.ventes
+(
+    id_client character varying COLLATE pg_catalog."default" NOT NULL,
+    quantite integer,
+    prix_unitaire integer,
+    identifiant_prod character varying(250) COLLATE pg_catalog."default",
+    CONSTRAINT ventes_pkey PRIMARY KEY (id_client)
+)
+
+insert into ventes values 
+(1,50,800,'climatiseur'),
+(2,20,400, 'micro onde'),
+(3,4,1000, 'PC'),
+(4,2, 600,'frigo'),
+(5,1,250,'machine_cafe'),
+(6,2,100, 'mixeur'),
+(7,6,700,'machine à laver'),
+(8,7,90,'seche cheveux'),
+(9,6,250,'lisseur'),
+(10,3,50,'centrifugeuse');
+

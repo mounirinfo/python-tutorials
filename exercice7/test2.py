@@ -1,7 +1,6 @@
-import psycopg2
 import pandas as pd
 from sqlalchemy import create_engine
-import io
+
 
 try:
     
@@ -23,8 +22,8 @@ try:
     ca_global=df['chiffre_daffaires'].sum()
     print("Le chiffre daffaires realise est: ", ca_global)
     #fermeture de la connexion à la base de données
-    cur.close()
-    conn.close()
+    
+    connexion.close()
     print("La connexion PostgreSQL est fermée")
     
 except (Exception, psycopg2.Error) as error :
