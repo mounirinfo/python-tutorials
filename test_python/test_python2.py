@@ -1,4 +1,6 @@
-
+# 1- first you need to define a separate function that has array of string as parameter
+#2- no need to split by -, because you already have an array of string splitted 
+#3- you can add tests separatedly from the function
 
 ligne_commande= input ("Entrez votre ligne de commande")
 
